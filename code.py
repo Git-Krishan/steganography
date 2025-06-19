@@ -3,7 +3,7 @@ from cryptography.fernet import Fernet
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.backends import default_backend
-
+#KRISHAN PUROHIT
 # Create a secret key from a password
 def get_key(password):
     kdf = PBKDF2HMAC(algorithm=hashes.SHA256(), length=32,
@@ -21,7 +21,7 @@ def bin_to_text(bin_data): return ''.join(chr(int(bin_data[i:i+8], 2)) for i in 
 def open_image(path):
     cmd = 'start' if platform.system() == 'Windows' else 'open' if platform.system() == 'Darwin' else 'xdg-open'
     os.system(f'{cmd} {path}')
-
+  #KRISHAN PUROHIT
 # Hide a secret message inside an image
 def encode(image_in, image_out, message, password):
     img = cv2.imread(image_in)
@@ -66,7 +66,7 @@ def decode(image_path, password):
         print("✅ Secret message:", decrypted)
     except:
         print("❌ Wrong password or message damaged.")
-
+#KRISHAN PUROHIT
 # ----------- Main Menu -----------
 
 def main():
@@ -86,3 +86,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    #KRISHAN PUROHIT
