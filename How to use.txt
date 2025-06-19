@@ -1,0 +1,20 @@
+How to Use
+Place a PNG image named mypic.png in the same folder as the script (or modify the script to use your image filename).
+
+Run the script:
+
+bash
+Copy
+Edit
+python stego.py
+When prompted:
+
+Type E to encode (hide) a message, or D to decode (recover) a message.
+
+Follow the prompts:
+
+For encoding: enter your secret message and a password.
+
+For decoding: enter the password used during encoding.
+
+The script will create a new image file named hidden.png with the hidden message embedded.
